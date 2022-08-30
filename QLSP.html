@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themsanpham</title>
+</head>
+<style>
+        .form
+            {
+                width: 100%;
+                height: 800px;
+                background-color: rgb(177, 214, 247);
+            }
+            .header
+            {
+                width: 100%;
+                height: 130px;
+                float: left;
+                background-color: rgba(0, 140, 255, 0.63); 
+            }
+            .logo
+            {
+                width: 150px;
+                height: 130px;
+                float: left;
+             
+            }
+            .quantri
+            {
+                width: 100%;
+                height: 450px;
+                float: left;
+            }
+            .chucnang
+            {
+                height: 250px;
+                width: 60%;
+                border: 1px solid;
+                float: left;
+                margin-left: 200px;
+                background-color: rgb(188, 247, 255);
+            }
+            .chucnang label
+            {
+                margin-left: 15px;
+            }
+</style>
+<body onload="HienThi()">
+    <div class="form">
+       
+        <div class="header">
+            <h1 style="text-align: center;color: red;">Cửa hàng sách Vũ Quang Đại</h1>
+            <div class="logo">
+            
+                <img src="" usemap="#Vemain"">
+                <map name="Vemain">
+                    <area shape="rect" coords=" 0, 0, 176, 212" 
+                    href="main.html">
+                </map>
+            </div>
+          <div class="quantri">          
+            <div class="chucnang">
+                <div style="font-size: 20px;text-transform: uppercase;padding-top: 5px; text-align: center;">
+                    Quản lí sản phẩm</div><br>
+                <input type="hidden" id="index">
+                <label for="">Mã sẩn phẩm:</label>
+                <input type="text" placeholder="Mã sản phẩm" id="MaSP" style="width:250px; margin-left: 3px;" >
+                <label for="">Mã loại sản phẩm:</label>
+                <input type="text" placeholder="Mã loại sản phẩm" id="MaLSP" style="width:250px;margin-left: 2px"><br> <br>
+                <label for="">Tên sẩn phẩm:</label>
+                <input type="text" placeholder="Tên sản phẩm" id="TenSP" style="width:250px;">
+                <label for="">Giá bán sẩn phẩm:</label>
+                <input type="text" placeholder="Giá bán sản phẩm" id="GiaSP" style="width:250px"><br><br>
+                <label for="">Số lượng:</label>
+                <input type="text" placeholder="Số lượng" id="SL" style="width:250px;margin-left: 31px">
+                <br><br>
+                <button id="save" onclick="ThemSP()" style="margin-left:330px; background-color: rgb(252, 8, 8);
+                 height: 30px; color: rgb(247, 247, 247);">Thêm sản phẩm</button>
+                <button id="update" onclick="SuaSP2()" style="display: none; margin-left:330px; background-color: rgb(252, 8, 8);
+                 height: 30px; color: rgb(255, 255, 255);">Cập nhật sản phẩm</button>
+                <div id="errorMasp"></div>
+                <div id="errorMalsp"></div>
+                <div id="errorTensp"></div>
+                <div id="errorGiasp"></div>
+                <div id="errorsl"></div>          
+              </div>
+              <table id="Noidung" width="90%" cellspacing="0" cellpadding="12" border="1">
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Mã Loại SP</th>
+                    <th >Tên SP</th>
+                    <th>Giá bán SP</th>
+                    <th>Số lượng</th>               
+                    <td>Chức năng</td>
+                </tr>
+            </table>
+          </div>
+          
+        </div>
+    </div>  
+    <script src="js/QLSP.js"></script>
+</body>
+</html>

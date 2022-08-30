@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>doan2</title>
+<link rel="stylesheet" href="css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<body>
+  <div class="khung1">
+    <h2 style="text-align: center;color: red;">Cửa hàng sách Vũ Quang Đại</h2>
+ <div class="khungto">
+  <div class="khung">
+      <div class="khunga">
+      <img class="img" src="img/trang chủ.jpg" alt="">
+      
+    </div>
+    <ul >
+        <li><a href="trang chủ.html"> TRANG CHỦ</a></li>
+    </ul>
+  </div>
+  
+  <div class="khung">
+    <div class="khunga">
+    <img class="img" src="img/sản phẩm.jpg" alt="">
+  </div>
+  <ul >
+    <li><a href="QLSP.html"> Quản Lý Sản Phẩm</a></li>
+</ul>
+</div>
+<div class="khung">
+    <div class="khunga">
+    <img class="img" src="img/nhân viên.jpg" alt="">
+  </div>
+  <ul >
+    <li><a href="QLNV.html"> Quản Lý Nhân Viên</a></li>
+</ul>
+</div>
+<div class="khung">
+    <div class="khunga">
+    <img class="img" src="img/taikhoan.jpg" alt="">
+  </div>
+  <ul >
+    <li><a href="javascript:LogOut();"> ĐĂNG XUẤT</a></li>
+</ul>
+</div>
+ </div>
+    <script>
+        var user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            window.location.href = "tài khoản.html";
+        }
+    </script>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+.khung{
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color : rgb(221, 226, 224);
+  float: left;
+margin-left: 25px;
+ margin-top: 50px;
+
+}
+.khunga{
+    width: 200px;
+    height: 150px;
+    float: left;
+   
+    
+}
+.img{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+.khungto{
+    width: 950px;
+    height: 300px;
+    margin-left: 250px;
+    float: left;
+    background-color: rgb(236, 231, 230);
+    border: 3px solid rgb(0, 0, 0);
+}
+.khung ul li{
+display: block;
+
+}
+.khung a:hover{
+  color: red;
+}
+.khung ul a {
+    color: royalblue;
+    text-decoration: none;
+}
+.khung1{
+    width: 1500px;
+    height: 800px;
+    background-color: rgb(147, 215, 247);
+    }

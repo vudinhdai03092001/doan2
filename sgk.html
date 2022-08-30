@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/sgk.css">
+       
+        <script src="js/silde.js"></script> 
+    </head>
+    <body>
+        <div class="top">
+            <div class="congcu" style="color: aliceblue;">
+                <ul>
+                    
+                    <li><a href="lịch .html">Lịch treo tường</a></li>  
+                    <li><a href="tranh.html">Tranh treo tường</a></li>
+                    <li><a href="tin tức .html">Tin tức</a></li>
+                    <li><a href="tài khoản.html">Tài khoản</a></li>
+                    <li><a href="cart.html">Kiểm tra đơn hàng</a></li>                               
+                </ul>
+            </div>
+            <div class="khungbia">
+                <div class="khungbia1">
+                    <img class="img1" src="img/logo.png" alt="">
+                </div>
+                <div class="khungbia2">
+                    <!-- <div class="congcu1" style="color: aliceblue;"> -->
+                    <div class="congcu1">
+                        <input type="text" placeholder="Tìm kiếm...">
+                        <button>
+                            <img style="width:33px;height:33px;float: left;" src="img/icon tìm kiếm.jpg" alt="">
+                        </button>
+                        <!-- <b>SĐT ...</b> -->
+                    </div>
+                    <div class="congcu2">
+                        <img class="imgicon" src="img/icon messenger.jpg" alt="">
+                        <ul>
+                            <li><a href="https://www.facebook.com/messages/t/100064832322353/">Messenger</a></li>
+                        </ul>
+                    </div>
+                    <div class="congcu2">
+                        <img class="imgicon" src="img/icon điện thoại.png" alt="">
+                        <ul>
+                            <li><a href="#">Telephone</a></li>
+                        </ul>
+                    </div>
+                    <div class="congcu2">
+                        <img class="imgicon" src="img/icon fb.png" alt="">
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100017265254765">Facebook</a></li>
+                        </ul>
+                    </div>
+                    <div class="congcu2">
+                        <img class="imgicon" src="img/gmail.png" alt="">
+                        <ul>
+                            <li><a href="https://myaccount.google.com/?utm_source=OGB&tab=mk&utm_medium=app">Gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="khungabc">
+            <hr style=" width: 1500px;float: left;border-width: 3px;background-color: coral">
+            <div class="congcu" >
+                <ul>
+                    
+                    <li><a href="trang chủ.html">Trang chủ</a></li>  
+                    <li><a href="THPT.html">Sách Thi THPT Quốc Gia</a></li>
+                    <li><a href="mẹ và bé.html">Sách Cho Mẹ Và Bé</a></li>
+                    <li><a href="phong thủy.html">Sách Phong Thủy</a></li>
+                    <li><a href="sách hay.html">Sách Hay</a></li>
+                </ul>
+            </div>
+            <div class="khung1abc" >
+                <h3 style="text-align: center;">DANH MỤC</h3>
+                <ul>
+                    <li><a href="sgk.html">Sách giáo khoa</a></li><br>                    
+                    <li><a href="tiếng anh.html">Sách tiếng anh</a></li><br>
+                    <li><a href="Truyện Tranh.html">Truyện Tranh</a></li><br>
+                    <li><a href="sức khỏe .html">Sách Sức Khỏe</a></li><br>
+                    <li><a href="khoa học.html">Sách Khoa Học</a></li><br>
+                    <li><a href="tình yêu.html">Sách Tình Yêu</a></li><br>
+                    <li><a href="cntt.html">Sách Công Nghệ Thông Tin</a></li><br>
+                    <li><a href="văn học.html">Sách Văn Học</a></li><br>
+                </ul>                          
+                <img class="anhkhung1abc" src="img/ảnh đọc sách 2.jpg" alt="">                                                   
+            </div>
+            <div class="khungtieude">
+            <div class="tieude">
+                <h1>SÁCH GIÁO KHOA CẤP  I</h1>
+            </div>
+            <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk T 1.jpg" alt="">                   
+                <b>Toán lớp 1</b><br>
+                <b style="color: red;">giá:80000đ</b>                                       
+                <button style="background-color :coral;" onclick="addToCart({id:'30',image:'img/sgk T 1.jpg', price:80000, name:'Toán lớp 1'})">Thêm vào giỏ</button>                            
+              </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk T 2.jpg" alt="">
+                <b>Toán lớp 2</b><br>
+                <b style="color: red;">giá:80000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'31',image:'img/sgk T 2.jpg', price:80000, name:'Toán lớp 2'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk T 3.jpg" alt="">
+                <b>Toán lớp 3</b><br>
+                <b style="color: red;">giá:80000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'32',image:'img/sgk T 3.jpg', price:80000, name:'Toán lớp 3'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk T 4.jpg" alt="">
+                <b>Toán 4</b><br>
+                <b style="color: red;">giá:80000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'33',image:'img/sgk T 4.jpg', price:80000, name:'Toán lớp 4'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk T 5.jpg" alt="">
+                <b>Toán 5</b><br>
+                <b style="color: red;">giá:90000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'34',image:'img/sgk T 4.jpg', price:90000, name:'Toán lớp 5'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk TV 1.jpg" alt="">
+                <b>Tiếng Việt lớp 1</b><br>
+                <b style="color: red;">giá:70000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'35',image:'img/sgk TV 1.jpg', price:70000, name:'Tiếng Việt lớp 1'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk TV 2.jpg" alt="">
+                <b>Tiếng Việt lớp 2</b><br>
+                <b style="color: red;">giá:70000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'36',image:'img/sgk TV 2.jpg', price:70000, name:'Tiếng Việt lớp 2'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk TV 3.jpg" alt="">
+                <b>Tiếng Việt lớp 3</b><br>
+                <b style="color: red;">giá:75000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'37',image:'img/sgk TV 3.jpg', price:75000, name:'Tiếng Việt lớp 3'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk TV 4.jpg" alt="">
+                <b>Tiếng Việt lớp 4</b><br>
+                <b style="color: red;">giá:70000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'38',image:'img/sgk TV 4.jpg', price:70000, name:'Tiếng Việt lớp 4'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk tv5.jpg" alt="">
+                <b>Tiếng Việt lớp 5</b><br>
+                <b style="color: red;">giá 80000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'39',image:'img/sgk tv5.jpg', price:80000, name:'Tiếng Việt lớp 5'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/sgk ta 1.jpg" alt="">
+                <b>Tiếng anh lớp 1</b><br>
+                <b style="color: red;">giá 90000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'40',image:'img/sgk ta 1.jpg', price:90000, name:'Tiếng anh lớp 1'})">Thêm vào giỏ</button>
+               </div>
+               <div class="khungnho1">
+                <img class="imganhnho" src="img/vbt t 4.jpg" alt="">
+                <b>Bài tập toán lớp 4</b><br>
+                <b style="color: red;">giá 50000đ</b>
+                <button style="background-color :coral;" onclick="addToCart({id:'41',image:'img/vbt t 4.jpg', price:50000, name:'Vở bài tập toán lớp 4'})">Thêm vào giỏ</button>
+               </div>
+           </div>           
+        </div>
+        <div class="footer">
+            <div class="footer1" style="color: beige;">
+                <b>FREE SHIPPING</b><br>
+                <b>Miễn phí vận chuyển đơn hàng trên 200000đ</b>
+            </div>
+            <div class="footer1" style="color: beige;">
+                <b>CHUYỂN HÀNG ĐÚNG GIỜ</b><br>
+                <b>Cam kết chuyển hàng nhanh nhất</b>
+            </div>
+            <div class="footer1" style="color: beige;">
+                <b>DỊCH VỤ TỐT NHẤT</b><br>
+              
+            </div>
+            <div class="footer1" style="color: beige;">
+                <b>HỖ TRỢ 24/7</b><br>
+                
+            </div>
+        </div>       
+    </body>
+</html>

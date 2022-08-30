@@ -1,0 +1,199 @@
+
+.top{
+    width: 1500px;
+    height:270px;
+    
+    background-color: royalblue;
+    float: left;
+}
+
+.congcu{
+    height: 30px;
+    width: 1500px;
+    
+    float: left;
+    padding-bottom:  10px;
+}
+.congcu1{
+    height: 30px;
+    width: 700px;   
+    margin-top: 50px;            
+}
+.congcu2{
+    height: 120px;
+    width: 100px;
+    float: left;   
+    margin: 10px;   
+}
+.congcu2 ul li{
+
+    text-align: center;
+    display: inline-block;
+}
+.congcu2 ul{
+    list-style: none;
+}
+.congcu2 ul a{
+    text-decoration: none;
+    color:black;  
+}
+.congcu2 a:hover{
+    color: red;
+}
+.imgicon{
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    float: right;
+}
+.congcu1 input{
+    height: 30px;
+    width: 500px;
+    border: 1.5px solid tan;
+    float: left;
+}
+.congcu1 button{
+    height: 35px;
+    width: 35px;
+    border: 1.5px solid tan;
+    float: left;
+    padding-left: 3px
+}
+.khungbia{
+    width: 1500px;
+    height: 200px;
+    border: 1.5px none red;
+    padding-top: 15px;
+    float: left;
+}
+.khungbia1{
+    width: 500px;
+    height: 200px;
+    float: left;
+}
+.khungbia2{
+    width: 600px;
+    height: 200px;
+    float: left;
+}
+.img1{
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;    
+}
+.congcu ul li{
+    width: 250px;
+    text-align: center;
+    display: inline-block;
+}
+.congcu ul{
+    list-style: none;
+}
+.congcu ul a{
+    text-decoration: none;
+    color:black;
+}
+.congcu a:hover{
+    color: sandybrown;
+}
+
+.khungabc{
+    height: 1100px;
+    width: 1500px;
+    float: left;
+  
+}
+.congcu{
+    height: 30px;
+    width: 1500px;   
+    float: left;
+    padding-bottom:  10px;
+}
+.khung1a{
+    width: 250px;
+    height: 1000px;   
+    float: left;
+    background-color: rgb(157, 255, 255);
+    margin-left: 40px;   
+}
+.anhkhung1a{
+    width: 230px;
+    height: 500px;
+    margin: 10px;
+
+}
+.khung1a ul li{
+    height: 50px;
+    display:inline-block;       
+}
+.khung1a ul li :hover{
+    
+}
+.khung1a ul{
+    list-style: none;
+}
+.khung1a ul a{
+    text-decoration: none;  
+    color: rgb(7, 7, 7);
+}
+.khung1a a:hover
+{
+color: rgb(255, 38, 0);
+}
+.khungtieude{
+    width: 1100px;
+    height: 1000px;
+    float: left;
+     
+    margin-left: 30px;
+}
+.tieude1{
+    width: 1100px;
+    height: 100px;  
+    background-color: rgb(196, 252, 249);
+    float: left;
+    text-align: center;
+    color: rgb(255, 0, 0);
+
+}
+
+.khungnho1{
+    width: 250px;
+    height: 300px;
+    float: left;
+    text-align: center;
+    padding-left: 15px;
+    background-color: rgb(208, 235, 247);
+    border-radius: 5%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.imganhnho{
+    width: 200px;
+    height:200px ;
+    margin-left: 28px;
+    float: left;
+    margin-top: 40px;
+}
+
+
+.anhkhung{
+    width: 200px;
+    height: 400px; 
+    border-radius: 10%;
+}
+.footer{
+    height: 100px;
+    width: 1500px;
+    clear: both;
+    background-color: royalblue;
+
+}.footer1{
+    height: 100px;
+    width: 300px;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 50px;
+
+}

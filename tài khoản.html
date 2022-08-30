@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+    input,
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #eb2626;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    div {
+        border-radius: 5px;
+        background-color: #f7f59a;
+        padding: 20px;
+    }
+
+    body {
+        width: 300px;
+        
+    }
+    .khung{
+  width: 300px;
+  height: 300px;
+  background-color: rgb(147, 170, 247);
+  margin: auto;
+    }
+  .khung1{
+  width: 1500px;
+  height: 600px;
+  background-color: rgb(147, 215, 247);
+  }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body>
+    <div class="khung1">
+    <H1 style="text-align: center;color: red;">Cửa hàng sách Quang Đại </H1>
+    <div class="khung">
+    <h3 style="text-align: center">Đăng nhập</h3>
+    <div>
+        <form id="target" action="main.html">
+            <label for="tailkhoan">Tài khoản</label>
+            <input type="text" id="tailkhoan" name="tailkhoan" placeholder="Nhập tài khoản..">
+            <label for="matkhau">Mật khẩu</label>
+            <input type="password" id="matkhau" name="matkhau" placeholder="Nhập mật khẩu..">
+            <input type="submit" value="Đăng nhập">
+            <label id="err" style="color: red;"></label>
+        </form>
+    </div>
+    <script>
+        $('#err').html('');
+        $("#target").submit(function (event) {
+            var _tailkhoan = $('#tailkhoan').val();
+            var _matkhau = $('#matkhau').val();
+            if (_tailkhoan == 'dai' && _matkhau == '123') {
+                var user = { tailkhoan: _tailkhoan, matkhau: _matkhau };
+                localStorage.setItem('user', JSON.stringify(user));
+                window.location.href = "main.html";
+            } else {
+                $('#err').html('Thông tin tài khoản hoặc mật khẩu không đúng');
+            }
+            event.preventDefault();
+        });
+    </script>
+    </div>
+</div>
+</body>
+
+</html>

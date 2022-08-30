@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        .form
+            {
+                width: 100%;
+                height: 800px;
+                background-color: rgb(180, 200, 255);
+            }
+            .header
+            {
+                width: 100%;
+                height: 130px;
+                float: left;
+                background-color: rgba(62, 139, 255, 0.63); 
+            }
+            .logo
+            {
+                width: 150px;
+                height: 130px;
+                float: left;
+             
+            }
+            .quantri
+            {
+                width: 100%;
+                height: 450px;
+                float: left;
+            }
+            .chucnang
+            {
+                height: 250px;
+                width: 60%;
+                border: 1px solid;
+                float: left;
+                margin-left: 200px;
+                background-color: rgb(217, 221, 255);
+            }
+            .chucnang label
+            {
+                margin-left: 15px;
+            }
+</style>
+<body onload="HienThi()">
+    <div class="form">
+        <div class="header">
+            <h1 style="text-align: center;color: red;">Cửa hàng sách Vũ Quang Đại</h1>
+            <div class="logo">
+                <img src="" usemap="#Velang"">
+                <map name="Velang">
+                    <area shape="rect" coords=" 0, 0, 176, 212" href="main.html" alt="">
+
+                </map>
+            </div>
+          <div class="quantri">          
+            <div class="chucnang">
+                <div style="font-size: 20px;text-transform: uppercase;padding-top: 5px; text-align: center;">Quản lí nhân viên</div><br>
+                <input type="hidden" id="index">
+                <label for="">Mã nhân viên:</label>
+                <input type="text" placeholder="Mã nhân viên" id="MaNV" style="width:250px; margin-left: 3px;" >
+                <label for="">Tên nhân viên:</label>
+                <input type="text" placeholder="Tên nhân viên" id="TenNV" style="width:250px;margin-left: 2px"><br> <br>
+                <label for="">Giới tính:</label>
+                <input type="radio" style="margin-left:32px" id="nam" value="Nam" name="GT">Nam
+                <input type="radio" id="nu" value="Nữ" name="GT">Nữ
+                <label for="" style="margin-left:185px">Ngày sinh:</label>
+                <input type="date" id="DOB" style="margin-left: 27px; width: 250px;"><br><br>
+                <label for="">Địa chỉ:</label>
+                <input type="text" placeholder="Địa chỉ" id="DiaChi" style="width:250px; margin-left: 45px;" >
+                <label for="" style="padding-left:3px">Email:</label>
+                <input type="text" placeholder="Email" id="Email" style="width:250px;margin-left: 52px"><br> <br>
+                <label for="">Số điện thoại:</label>
+                <input type="text" placeholder="Số điện thoại" id="SDT" style="width:250px; margin-left: 7px;" ><br><br>
+                <button id="save" onclick="ThemNV()" style="margin-left:330px; background-color: rgb(255, 0, 0); height: 30px; color: rgb(248, 248, 248);">Thêm nhân viên</button>
+                <button id="update" onclick="SuaNV2()" style="display: none; margin-left:330px; background-color: rgb(252, 8, 8); height: 30px; color: rgb(255, 255, 255);">Cập nhật nhân viên</button>
+                <div id="errorManv"></div>
+                <div id="errortennv"></div>
+                <div id="errorgt"></div>
+                <div id="errordob"></div>
+                <div id="errordiachi"></div>
+                <div id="errorsdt"></div>   
+                <div id="erroremail"></div>             
+          </div>
+          <table id="Noidung" width="90%" cellspacing="0" cellpadding="12" border="1">
+            <tr>
+                <th>Mã NV</th>           
+                <th >Tên NV</th>
+                <th>Giới Tính</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <td>Action</td>
+            </tr>
+        </table>
+          
+        </div>
+    </div>  
+    <script src="js/QLNV.js"></script>
+</body>
+</html>

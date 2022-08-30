@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stype.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="menu">
+            <ul>
+                <li><a href="trang chủ.html">Trang chủ</a></li>
+                <li><a href="giới thiệu.html">Giới thiệu</a></li>               
+                <li><a href="liên hệ.html">Liên hệ</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a style="color: red;" href="#" onclick="XoaCart()">Xóa Giỏ hàng</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="col-8 col-s-12 form-nhap">
+            <h1>THÔNG TIN THANH TOÁN</h1>
+            <form>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-6 col-s-12">
+                        <label for="txt_hdem">Họ đệm <span id="s_hdem" style="color: red;">*</span> </label><br>
+                        <input id="txt_hdem" type="text">
+                    </div>
+                    <div class="col-6 col-s-12">
+                        <div style="margin-left: 5px;">
+                            <label for="txt_ten">Tên <span id="s_ten" style="color: red;">*</span> </label><br>
+                            <input id="txt_ten" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-12 col-s-12">
+                        <label for="slt_qgia">Quốc gia <span id="s_qgia" style="color: red;">*</span> </label><br>
+                        <select id="slt_qgia">
+                            <option value="VN">Việt Nam</option>
+                            <option value="TQ">Trung Quốc</option>
+                            <option value="US">Mỹ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-12 col-s-12">
+                        <label for="txt_dchi">Địa chỉ:</label><br>
+                        <input type="text" id="txt_dchi">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-12 col-s-12">
+                        <label for="txt_email">Email <span style="color: red;" id="s_email"> </span> </label><br>
+                        <input type="text" id="txt_email">
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-12 col-s-12">
+                        <label for="txt_dienthoai">Số điện thoại <span id="s_dienthoai"> </span></label><br>
+                        <input type="text" id="txt_dienthoai">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-4 col-s-12 from-thanhtoan">
+            <h1>ĐƠN HÀNG CỦA BẠN</h1>
+            <div class="row thanhtoan">
+                <div class="col-6 col-s-12" style="text-align: left;">
+                    <label>SẢN PHẨM</label>
+                </div>
+                <div class="col-6 col-s-12" style="text-align: right;">
+                    <label>TỔNG</label>
+                </div>
+            </div>
+            <div id="spham">
+
+            </div>
+            <!-- <div class="row thanhtoan">
+                <div class="col-6 col-s-12" style="text-align: left;">
+                    <label>Sản phẩm 1 * 1</label>
+                </div>
+                <div class="col-6 col-s-12" style="text-align: right;">
+                    <label>700,000đ</label>
+                </div>
+            </div>
+            <div class="row thanhtoan">
+                <div class="col-6 col-s-12" style="text-align: left;">
+                    <label>Sản phẩm 1 * 1</label>
+                </div>
+                <div class="col-6 col-s-12" style="text-align: right;">
+                    <label>700,000đ</label>
+                </div>
+            </div> -->
+            <div class="row thanhtoan">
+                <div class="col-6 col-s-12" style="text-align: left;">
+                    <label>Tổng</label>
+                </div>
+                <div class="col-6 col-s-12" style="text-align: right;">
+                    <label id="tt">0</label>đ
+                </div>
+            </div>
+            <div class="row thanhtoan">
+                <div class="col-12 col-s-12" style="text-align: left;">
+                    <button onclick="DatHang()">ĐẶT HÀNG</button>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        var list = JSON.parse(localStorage.getItem('cart'));
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        function DatHang() {
+            var hodem = $('#txt_hdem').val();
+            if (hodem == null || hodem == '' || hodem.length > 30) {
+                $('#s_hdem').html('Sai định dạng họ đệm');
+            } else {
+                $('#s_hdem').html('*');
+            }
+            var email = $('#txt_email').val();
+            if (email != '' && !validateEmail(email)) {
+                $('#s_email').html('Sai định dạng email');
+            } else {
+                $('#s_email').html('');
+            }
+            var sodt = $('#txt_sdt').val();
+            if (sodt == null || sodt == '' || sodt.length <10) {
+                $('#s_sdt').html('Sai định dạng sdt');
+            } else {
+                $('#s_sdt').html('*');
+            }
+            
+            //Print
+            var str = `
+                <section style="text-align: center;">
+                    <h1>HÓA ĐƠN GIÁ TRỊ GIA TĂNG</h1>
+                </section>
+                <div style="font-style: italic;">
+                    05 tháng 05 năm 2021        
+                </div>
+                <div class="donvi">Tên đơn vị bán hàng: Cửa hàng sách VŨ QUANG ĐẠI</div>
+                <div>Người mua hàng:`+hodem+`</div>
+                <div>Email:`+email+`</span></div>
+                <div>số điện thoại:`+sodt+`</span></div>
+                <table style="width: 100%;">
+                    <table style="background-color: rgb(255, 255, 255);"  border=3 bgcolor = lavender cellspacing = 5 cellspacing =10>
+                    <tr>
+                        <th rowspan=1>STT</th>
+                <th rowspan=1>Tên hàng</th>
+                <th rowspan=1>số lượng</th>
+                <th rowspan=1>thành tiền</th>
+            </tr>
+            `
+           ;
+            var n = 0;
+            for (x of list) {
+                str += `
+                <tr>
+                    <td>`+(++n)+`</td>
+                    <td>`+x.name+`</td>
+                    <td>`+x.quantity+`</td>
+                    <td>`+ (x.price * x.quantity) +`</td>
+                 </tr>
+                `;
+            }
+            str += `</table>
+            <img src="img/ảnh đọc sách 1.jpg" alt="">
+            `;
+            printHtml(str);
+            // printHtmlWithUrl('cart.html')
+        }
+        function LoadData() {
+            var str = "";
+            var t = 0;
+            for (x of list) {
+                t += x.price * x.quantity;
+                str += `
+                <div class="row thanhtoan">
+                    <div class="col-6 col-s-12" style="text-align: left;">
+                        <label>` + x.name + `*` + x.quantity + `</label>
+                    </div>
+                    <div class="col-6 col-s-12" style="text-align: right;">
+                        <label>`+ (x.price * x.quantity) + `đ</label>
+                    </div>
+                </div>
+                `;
+            }
+            $('#spham').html(str);
+            $('#tt').html(t);
+        }
+        LoadData();
+        function printHtml(data) {
+            let popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
+            popupWin.document.write(`
+                <html>
+                    <head>
+                    <title>Print tab</title>
+                    <style>
+                        * {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        table {
+                            width: 100%;
+                        }
+                        .donvi {
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        body {
+                            width: 1000px;
+                            margin: 0 auto;
+                        }
+                    </style>
+                    </head>
+                <body onload="window.print();window.close()">${data}</body>
+                </html>`
+            );
+            popupWin.document.close();
+        }
+        function printHtmlWithUrl(url) {
+            debugger;
+            let newWindow = window.open(url, '_blank', 'top=0,left=0,height=100%,width=auto');
+            newWindow.focus();
+            newWindow.print();
+            newWindow.close();
+        }
+    </script>
+
+</body>
+
+</html>
